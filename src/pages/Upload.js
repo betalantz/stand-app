@@ -18,7 +18,7 @@ export default function Upload() {
 
         // 1. store the image on eg. Cloudinary, get the link 
         console.log('Storing image')
-        const resp = await fetch('https://api.cloudinary.com/v1_1/gingertonic-fis/upload', {
+        const resp = await fetch('https://api.cloudinary.com/v1_1/dv6zt4gxq/image/upload', {
             method: 'POST',
             body: imageData
         })
