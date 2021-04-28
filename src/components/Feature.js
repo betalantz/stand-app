@@ -14,12 +14,13 @@ export default function Feature({ sub, submit }) {
             body: JSON.stringify({ id: imageId })
         })
         const { error, message } = resp.json()
-        error ? console.error('Something went wrong...') : setRevealed(true)
+        error ? console.error('Something went wrong...', message) : setRevealed(true)
     }
 
     const setResult = async result => {
         if(responded){return}
-        const resp = await submit(imageId, result)
+        // const resp = await submit(imageId, result)
+        await submit(imageId, result)
         setResponded(result ? "Y" : "N")
     }
 

@@ -12,6 +12,7 @@ export default function Play() {
             console.log('Fetching featured')
             const resp = await fetch('/api/featured')
             const { featured } = await resp.json()
+            console.log(featured)
             setFeatured(featured)
             setLoading(false)
         }
@@ -30,7 +31,7 @@ export default function Play() {
 
     const showFeatured = () => {
         return !featured[0] ? <p className="centered">We're out of submissions!</p>
-        : featured.map(f => <Feature key={Math.random()} sub={f} submit={submitResult}/>)
+        : featured.map(f => <Feature key={f.ts} sub={f} submit={submitResult}/>)
     }
 
     const showTotals = () => overview ? <p id="total">{overview.totalCorrect} / {overview.totalShown} correct</p> : null
