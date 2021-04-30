@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        <header><NavLink to="/"><h1>Stand App</h1></NavLink></header>
+        <header><NavLink to="/"><h1>Community Guess</h1></NavLink></header>
         <nav>
           <NavLink className="nav-link" activeClassName="current-page" to="/upload">Upload</NavLink>
           <NavLink className="nav-link" activeClassName="current-page" to="/play">Play</NavLink>
