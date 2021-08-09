@@ -11,10 +11,11 @@ export default function Upload() {
 
     const handleUploadClick = async () => {
         setUploadStatus('Uploading . . .')
-
+        const filename = file.split('.')[0] + '.jpg'
+        console.log('filename: ', filename);
         const imageData = new FormData()
         imageData.append('upload_preset', 'stand-app')
-        imageData.append('file', file)
+        imageData.append('file', filename)
 
         // 1. store the image on eg. Cloudinary, get the link 
         console.log('Storing image')
