@@ -12,7 +12,6 @@ export default function Play() {
             console.log('Fetching featured')
             const resp = await fetch('/api/featured')
             const { featured } = await resp.json()
-            console.log(featured)
             setFeatured(featured)
             setLoading(false)
         }
